@@ -6,4 +6,8 @@ class Photo < ActiveRecord::Base
   def rate
     Judge.rate(self)
   end
+
+  def rank
+    Judge.rank(self)
+  end
 end

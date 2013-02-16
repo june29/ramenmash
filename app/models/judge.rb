@@ -54,5 +54,11 @@ class Judge < ActiveRecord::Base
     def rate(photo)
       rates[photo]
     end
+
+    def rank(photo)
+      ranking.select {|entry|
+        entry[:photo] == photo
+      }.first[:rank]
+    end
   end
 end
