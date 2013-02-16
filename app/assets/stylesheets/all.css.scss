@@ -35,6 +35,13 @@ footer {
   display: block;
   width: 280px;
   margin: 0 auto 20px;
+  position: relative;
+
+  .btn {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+  }
 }
 
 .photo-basic {
