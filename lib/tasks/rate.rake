@@ -1,4 +1,4 @@
-desc 'calc dates'
+desc 'calc rates'
 
 task rate: :environment do
   INITIAL_RATE = 1500
