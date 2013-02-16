@@ -11,7 +11,17 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130216020209) do
+ActiveRecord::Schema.define(:version => 20130216020924) do
+
+  create_table "judges", :force => true do |t|
+    t.integer  "winner_id",  :null => false
+    t.integer  "loser_id",   :null => false
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  add_index "judges", ["loser_id"], :name => "index_judges_on_loser_id"
+  add_index "judges", ["winner_id"], :name => "index_judges_on_winner_id"
 
   create_table "photos", :force => true do |t|
     t.string   "name",        :null => false
