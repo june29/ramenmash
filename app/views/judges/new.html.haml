@@ -1,2 +1,3 @@
 #judge-photos
-  = render :partial => "photos/basic", :as => :photo, :collection => @pair
+  = render :partial => "judges/voter", :locals => { :winner => @first,  :loser => @second }
+  = render :partial => "judges/voter", :locals => { :winner => @second, :loser => @first  }

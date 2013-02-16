@@ -1,0 +1,2 @@
+= link_to judges_path(:winner_id => winner.id, :loser_id => loser.id), :method => :post, :class => "link-to-vote" do
+  = render :partial => "photos/basic", :as => :photo, :object => winner

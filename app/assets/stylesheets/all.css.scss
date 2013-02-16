@@ -17,9 +17,14 @@ header {
   text-align: center;
 }
 
-.photo-basic {
+.link-to-vote {
+  display: block;
   width: 280px;
   margin: 0 auto 20px;
+}
+
+.photo-basic {
+  width: 280px;
   position: relative;
 
   .text {
