@@ -1,1 +1,18 @@
-/**/
+header {
+  .navbar-inner {
+    min-height: 0;
+    padding: 10px 0;
+  }
+
+  .container-fluid {
+    text-align: center;
+
+    .question {
+      color: #fff;
+    }
+  }
+}
+
+#main {
+  text-align: center;
+}

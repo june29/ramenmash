@@ -1,3 +1,5 @@
 .photo-basic
-  = image_tag(photo.url, :width => 300)
-  = link_to photo.name, photo.link_url
+  .image
+    = image_tag(photo.url, :width => 300)
+  .text
+    = link_to photo.name, photo.link_url
