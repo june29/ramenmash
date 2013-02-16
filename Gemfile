@@ -15,6 +15,7 @@ end
 group :development do
   gem 'sqlite3'
   gem 'pry'
+  gem 'twitter-bootstrap-rails'
 end
 
 group :production do
