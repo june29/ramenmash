@@ -1,16 +1,19 @@
 class JudgesController < ApplicationController
-  def new
-    pair = Photo.all.sample(2)
+  def show
+    @judge = Judge.find(params[:id])
+    @first, @second = Photo.exclude(@judge.winner.id).sample(2)
+  end
 
-    @first, @second = pair
+  def new
+    @first, @second = Photo.all.sample(2)
   end
 
   def create
     winner_id = params[:winner_id]
     loser_id  = params[:loser_id]
 
-    Judge.create(:winner_id => winner_id, :loser_id => loser_id)
+    judge = Judge.create(:winner_id => winner_id, :loser_id => loser_id)
 
-    redirect_to root_path
+    redirect_to judge
   end
 end

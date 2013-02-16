@@ -1,0 +1,6 @@
+#judge-result
+  %h3
+    あなたが選んだのは
+  = render :partial => "photos/basic", :as => :photo, :object => @judge.winner, :locals => { :show_name => true }
+
+= render :partial => "judges/voters", :locals => { :first => @first, :second => @second }

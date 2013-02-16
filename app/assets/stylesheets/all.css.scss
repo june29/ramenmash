@@ -22,6 +22,10 @@ footer {
   text-align: center;
 }
 
+#judge-result {
+  margin-bottom: 40px;
+}
+
 .link-to-vote {
   display: block;
   width: 280px;
@@ -30,9 +34,10 @@ footer {
 
 .photo-basic {
   width: 280px;
+  margin: 0 auto;
   position: relative;
 
-  .text {
+  .name {
     width: 100%;
     color: #fff;
     background-color: rgba(0, 0, 0, 0.8);

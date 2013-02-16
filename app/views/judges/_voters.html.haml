@@ -1,0 +1,5 @@
+#judge-photos
+  %h3
+    どっちがおいしそう？
+  = render :partial => "judges/voter", :locals => { :winner => @first,  :loser => @second }
+  = render :partial => "judges/voter", :locals => { :winner => @second, :loser => @first  }

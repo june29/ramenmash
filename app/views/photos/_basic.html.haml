@@ -1,5 +1,8 @@
+- show_name ||= false
+
 .photo-basic
   .image
     = image_tag(photo.url, :width => 280)
-  %p.text
-    = photo.name
+  - if show_name
+    %p.name
+      = photo.name
