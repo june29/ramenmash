@@ -18,9 +18,18 @@ header {
 }
 
 .photo-basic {
-  margin-bottom: 20px;
+  width: 280px;
+  margin: 0 auto 20px;
+  position: relative;
 
   .text {
-    margin-top: 10px;
+    width: 100%;
+    color: #fff;
+    background-color: rgba(0, 0, 0, 0.8);
+    text-align: center;
+    padding: 10px 0;
+    position: absolute;
+    bottom: 0;
+    left: 0;
   }
 }
