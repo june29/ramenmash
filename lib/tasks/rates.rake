@@ -1,6 +1,6 @@
 desc 'calc rates'
 
-task rate: :environment do
+task rates: :environment do
   rates = Judge.rates
 
   puts "---- Overall Ranking ----"
