@@ -9,7 +9,10 @@ class Judge < ActiveRecord::Base
     K = 32
 
     def rates
-      rates = Hash.new(INITIAL_RATE)
+      rates = {}
+      Photo.all.each do |photo|
+        rates[photo] = INITIAL_RATE
+      end
 
       Judge.order(:id).each do |judge|
         a = judge.winner
