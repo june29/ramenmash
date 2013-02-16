@@ -6,6 +6,8 @@
   = render :partial => "photos/basic", :as => :photo, :object => winner, :locals => { :show_name => true }
   %p
     %strong
-      = "Score: %d" % winner.rate
+      = "第%d位" % winner.rank
+    %span
+      = "%d Points" % winner.rate
 
 = render :partial => "judges/voters", :locals => { :first => @first, :second => @second }
