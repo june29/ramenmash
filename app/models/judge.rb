@@ -29,6 +29,25 @@ class Judge < ActiveRecord::Base
       rates
     end
 
+    def ranking
+      sorted = rates.sort_by {|photo, rate| -rate}
+      rank = 0
+      last_rate = nil
+      ranking = []
+      sorted.each_with_index do |(photo, rate), index|
+        if rate != last_rate
+          rank = index + 1
+        end
+        ranking << {
+          rank: rank,
+          photo: photo,
+          rate: rate
+        }
+        last_rate = rate
+      end
+      ranking
+    end
+
     def rate(photo)
       rates[photo]
     end
