@@ -4,6 +4,7 @@ gem 'rails', '3.2.12'
 
 gem 'jquery-rails'
 gem 'haml-rails'
+gem 'twitter-bootstrap-rails'
 
 group :assets do
   gem 'sass-rails',   '~> 3.2.3'
@@ -15,7 +16,6 @@ end
 group :development do
   gem 'sqlite3'
   gem 'pry'
-  gem 'twitter-bootstrap-rails'
 end
 
 group :production do
