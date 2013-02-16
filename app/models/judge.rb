@@ -1,13 +1,13 @@
 class Judge < ActiveRecord::Base
+  INITIAL_RATE = 1500
+  K = 32
+
   attr_accessible :winner_id, :loser_id
 
   belongs_to :winner, :class_name => :Photo
   belongs_to :loser, :class_name => :Photo
 
   class << self
-    INITIAL_RATE = 1500
-    K = 32
-
     def rates
       rates = {}
       Photo.all.each do |photo|
