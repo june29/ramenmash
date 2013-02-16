@@ -1,6 +1,6 @@
 desc 'calc rates'
 
-task rates: :environment do
+task ranking: :environment do
   puts "---- Overall Ranking ----"
   Judge.ranking.each do |entry|
     rank = entry[:rank]
