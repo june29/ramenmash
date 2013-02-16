@@ -50,13 +50,32 @@ footer {
   position: relative;
 
   .name {
-    width: 100%;
+    width: 260px;
     color: #fff;
-    background-color: rgba(0, 0, 0, 0.8);
+    background-color: rgba(0, 0, 0, 0.6);
     text-align: center;
+    margin: 0 auto;
     padding: 10px 0;
     position: absolute;
-    bottom: 0;
-    left: 0;
+    bottom: 10px;
+    left: 10px;
+  }
+}
+
+.ranking-entry {
+  margin-bottom: 20px;
+
+  .stats {
+    color: #fff;
+    background-color: #000;
+    padding: 10px 0;
+
+    strong {
+      font-size: 120%;
+    }
+
+    span {
+      color: #ccc;
+    }
   }
 }

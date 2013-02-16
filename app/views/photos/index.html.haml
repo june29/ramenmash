@@ -1,5 +1,8 @@
 - @ranking.each do |entry|
-  %div
-    = entry[:rank]
+  .ranking-entry
+    .stats
+      %strong
+        = "第%d位" % entry[:rank]
+      %span
+        = "%d Points" % entry[:rate]
     = render :partial => "photos/basic", :as => :photo, :object => entry[:photo], :locals => { :show_name => true }
-    = '(%d)' % entry[:rate]
