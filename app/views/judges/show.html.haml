@@ -10,4 +10,7 @@
     %span
       = "%d Points" % winner.rate
 
+  %p.nav-to-ranking
+    = link_to "ランキングを見る", photos_path
+
 = render :partial => "judges/voters", :locals => { :first => @first, :second => @second }
